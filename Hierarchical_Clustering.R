@@ -1,6 +1,6 @@
 # read data from .csv, and load to a dataframe
 library(readr)
-data <- read_csv("C:/Users/ASUS/Downloads/Elective Subject Quiz (Responses) - Form Responses 1.csv")
+data <- read_csv("Survey_Response.csv")
 head(data)
 
 # remove "timestamp" column
