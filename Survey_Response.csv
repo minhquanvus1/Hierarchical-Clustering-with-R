@@ -1,0 +1,58 @@
+Timestamp,"What is your age?
+Tuổi của bạn là bao nhiêu?","Which year are you in?
+Bạn là sinh viên năm mấy?","What is your gender?
+Giới tính của bạn là gì?","What is your major or field of study?
+Chuyên ngành học của bạn là gì?","Are you involved in any extracurricular activities? (Select all that apply)
+Bạn có tham gia vào các hoạt động ngoại khóa nào không? (Hãy chọn tất cả những hoạt động bạn tham gia)","How many hours per week, on average, do you spend on extracurricular activities? (Example: Sports, Club, Project,...)
+Trung bình mỗi tuần, bạn dành bao nhiêu giờ cho các hoạt động ngoại khóa?
+Please insert number of hours","What is your current GPA? - German Scale 1.0-4.0
+(All information is secured and non-disclosed and only used for educational and research purposes)
+Điểm trung bình hiện tại hoặc tình hình học tập của bạn là gì? (Tất cả thông tin được bảo mật và không được tiết lộ, chỉ được sử dụng cho mục đích giáo dục và nghiên cứu)","How satisfied are you with your academic performance? 
+Bạn cảm thấy hài lòng như thế nào với hiệu suất học tập của mình?","How satisfied are you with your overall university experience? (Example: Teacher dedication, friends, life quality,...)
+Bạn cảm thấy hài lòng như thế nào với trải nghiệm tổng thể tại trường đại học? (Ví dụ: Sự tận tâm của giảng viên, bạn bè, chất lượng cuộc sống,...) "
+10/31/2023 15:19:48,21,Fourth Year of University (Năm bốn),Male (Nam),CSE,"Clubs or Organizations (Câu lạc bộ hoặc tổ chức), Side project",1,2.5,7,4
+10/31/2023 15:21:33,23,Fourth Year of University (Năm bốn),Male (Nam),CSE,Side project,5,1.6,8,8
+10/31/2023 15:22:26,21,Fourth Year of University (Năm bốn),Female (Nữ),CSE,"Clubs or Organizations (Câu lạc bộ hoặc tổ chức), Volunteer Work (Hoạt động tình nguyện)",5,2.2,7,6
+10/31/2023 15:23:44,21,Fourth Year of University (Năm bốn),Male (Nam),CSE,Side project,0,1.4,8,7
+10/31/2023 15:27:12,21,Fourth Year of University (Năm bốn),Male (Nam),CSE,"Sports (not club-based) (Thể thao không thuộc câu lạc bộ ), Side project",7,2.1,7,6
+10/31/2023 15:27:14,20,Third year of University (Năm ba),Male (Nam),MEN,"Sports (not club-based) (Thể thao không thuộc câu lạc bộ ), Volunteer Work (Hoạt động tình nguyện)",5,4,4,3
+10/31/2023 15:29:07,23,Fourth Year of University (Năm bốn),Male (Nam),CSE,Side project,5,1.6,8,8
+10/31/2023 15:29:43,21,Fourth Year of University (Năm bốn),Male (Nam),CSE,"Sports (not club-based) (Thể thao không thuộc câu lạc bộ ), Side project",14,1.5,7,7
+10/31/2023 15:33:07,21,Fourth Year of University (Năm bốn),Male (Nam),CSE,Clubs or Organizations (Câu lạc bộ hoặc tổ chức),0.5,1.7,4,6
+10/31/2023 16:25:41,21,Fourth Year of University (Năm bốn),Male (Nam),CSE,"Sports (not club-based) (Thể thao không thuộc câu lạc bộ ), Volunteer Work (Hoạt động tình nguyện), Side project",1.5,2.7,6,8
+10/31/2023 16:47:09,22,Third year of University (Năm ba),Male (Nam),CSE,Sports (not club-based) (Thể thao không thuộc câu lạc bộ ),10,2,7,8
+10/31/2023 19:44:49,23,Fourth Year of University (Năm bốn),Male (Nam),CSE,"Sports (not club-based) (Thể thao không thuộc câu lạc bộ ), Side project",14,2.2,8,8
+10/31/2023 20:23:24,21,Third year of University (Năm ba),Male (Nam),CSE,"Sports (not club-based) (Thể thao không thuộc câu lạc bộ ), Side project",4,2,6,8
+10/31/2023 20:24:25,22,Fourth Year of University (Năm bốn),Male (Nam),CSE,"Clubs or Organizations (Câu lạc bộ hoặc tổ chức), Internships (Thực tập)",3,2,5,3
+10/31/2023 20:27:23,21,Fourth Year of University (Năm bốn),Male (Nam),CSE,"Sports (not club-based) (Thể thao không thuộc câu lạc bộ ), Side project",12,2.1,8,5
+10/31/2023 20:35:01,20,Third year of University (Năm ba),Male (Nam),CSE,"Sports (not club-based) (Thể thao không thuộc câu lạc bộ ), Side project",10,2,1,8
+10/31/2023 20:39:58,20,Third year of University (Năm ba),Male (Nam),CSE,Sports (not club-based) (Thể thao không thuộc câu lạc bộ ),0,1.8,6,7
+10/31/2023 20:41:02,21,Fourth Year of University (Năm bốn),Male (Nam),CSE,Sports (not club-based) (Thể thao không thuộc câu lạc bộ ),6,2.9,6,7
+10/31/2023 20:49:35,19,First year of University (Năm nhất),Male (Nam),CSE,Clubs or Organizations (Câu lạc bộ hoặc tổ chức),5,1.4,7,6
+10/31/2023 23:37:16,21,Fourth Year of University (Năm bốn),Female (Nữ),CSE,"Sports (not club-based) (Thể thao không thuộc câu lạc bộ ), Clubs or Organizations (Câu lạc bộ hoặc tổ chức), Volunteer Work (Hoạt động tình nguyện)",5,2.3,4,5
+11/1/2023 10:00:47,20,Second year of University (Năm hai),Male (Nam),BFA,Clubs or Organizations (Câu lạc bộ hoặc tổ chức),3,2,5,5
+11/1/2023 10:45:58,22,Fourth Year of University (Năm bốn),Male (Nam),CSE,Sports (not club-based) (Thể thao không thuộc câu lạc bộ ),2,2.9,8,6
+11/1/2023 20:27:02,21,Fourth Year of University (Năm bốn),Male (Nam),CSE,Sports (not club-based) (Thể thao không thuộc câu lạc bộ ),14,1.9,5,6
+11/1/2023 20:33:48,21,Fourth Year of University (Năm bốn),Male (Nam),MEN,"Sports (not club-based) (Thể thao không thuộc câu lạc bộ ), Internships (Thực tập)",8,3.5,5,5
+11/1/2023 20:34:55,20,Third year of University (Năm ba),Male (Nam),ECE,"Sports (not club-based) (Thể thao không thuộc câu lạc bộ ), Clubs or Organizations (Câu lạc bộ hoặc tổ chức), Volunteer Work (Hoạt động tình nguyện), Side project",6,2.3,6,7
+11/1/2023 20:38:35,20,Third year of University (Năm ba),Female (Nữ),BFA,"Clubs or Organizations (Câu lạc bộ hoặc tổ chức), Side project",6,1.7,8,10
+11/1/2023 20:54:32,20,Third year of University (Năm ba),Male (Nam),BFA,"Clubs or Organizations (Câu lạc bộ hoặc tổ chức), Volunteer Work (Hoạt động tình nguyện)",1,2,8,9
+11/1/2023 21:15:27,20,Third year of University (Năm ba),Female (Nữ),BFA,Clubs or Organizations (Câu lạc bộ hoặc tổ chức),8,2.7,6,7
+11/1/2023 21:33:05,23,Fourth Year of University (Năm bốn),Female (Nữ),BCE,"Volunteer Work (Hoạt động tình nguyện), Side project",1,2.5,1,3
+11/1/2023 21:36:25,21,Fourth Year of University (Năm bốn),Male (Nam),MEN,Sports (not club-based) (Thể thao không thuộc câu lạc bộ ),10,2.1,8,8
+11/1/2023 21:54:41,20,Third year of University (Năm ba),Male (Nam),ARC,"Sports (not club-based) (Thể thao không thuộc câu lạc bộ ), Internships (Thực tập)",14,2,8,8
+11/1/2023 22:17:52,21,Fourth Year of University (Năm bốn),Male (Nam),BBA,"Sports (not club-based) (Thể thao không thuộc câu lạc bộ ), Volunteer Work (Hoạt động tình nguyện)",4,2.6,1,8
+11/1/2023 22:57:58,20,Third year of University (Năm ba),Male (Nam),ECE,"Sports (not club-based) (Thể thao không thuộc câu lạc bộ ), Volunteer Work (Hoạt động tình nguyện), Internships (Thực tập)",24,4,4,1
+11/1/2023 23:36:07,21,Fourth Year of University (Năm bốn),Prefer not to say,BCE,Clubs or Organizations (Câu lạc bộ hoặc tổ chức),2,2.3,7,8
+11/2/2023 7:54:37,21,Fourth Year of University (Năm bốn),Male (Nam),CSE,Sports (not club-based) (Thể thao không thuộc câu lạc bộ ),4,2,5,7
+11/2/2023 9:17:36,20,Third year of University (Năm ba),Male (Nam),ECE,Sports (not club-based) (Thể thao không thuộc câu lạc bộ ),2,2,6,9
+11/2/2023 11:01:38,21,Fourth Year of University (Năm bốn),Male (Nam),CSE,Side project,10,2.3,5,5
+11/2/2023 11:37:26,20,Third year of University (Năm ba),Female (Nữ),BFA,Clubs or Organizations (Câu lạc bộ hoặc tổ chức),4,2.9,7,7
+11/2/2023 11:47:53,20,Third year of University (Năm ba),Male (Nam),MEN,"Volunteer Work (Hoạt động tình nguyện), Internships (Thực tập)",8,1.6,9,8
+11/2/2023 15:16:45,20,Third year of University (Năm ba),Male (Nam),CSE,"Sports (not club-based) (Thể thao không thuộc câu lạc bộ ), Clubs or Organizations (Câu lạc bộ hoặc tổ chức), Volunteer Work (Hoạt động tình nguyện)",7,1.6,7,8
+11/2/2023 16:57:21,22,Fifth,Male (Nam),MEN,Sports (not club-based) (Thể thao không thuộc câu lạc bộ ),6,3,6,7
+11/2/2023 18:50:48,20,Third year of University (Năm ba),Female (Nữ),BFA,"Sports (not club-based) (Thể thao không thuộc câu lạc bộ ), Volunteer Work (Hoạt động tình nguyện)",4,2.2,5,7
+11/3/2023 8:34:55,21,Fourth Year of University (Năm bốn),Male (Nam),CSE,"Sports (not club-based) (Thể thao không thuộc câu lạc bộ ), Clubs or Organizations (Câu lạc bộ hoặc tổ chức), Internships (Thực tập), Side project",6,2.5,7,7
+11/6/2023 10:45:32,21,Fourth Year of University (Năm bốn),Male (Nam),CSE,"Sports (not club-based) (Thể thao không thuộc câu lạc bộ ), Clubs or Organizations (Câu lạc bộ hoặc tổ chức)",1.5,2.8,4,8
+11/6/2023 14:29:15,26,First year of University (Năm nhất),Female (Nữ),CSE,Sports (not club-based) (Thể thao không thuộc câu lạc bộ ),6,2.1,1,6
+11/6/2023 14:50:50,20,Third year of University (Năm ba),Male (Nam),BFA,No,0,1.7,6,7
