@@ -5,6 +5,10 @@ library(dplyr)
 data <- read_csv("Survey_Response.csv")
 head(data)
 
+# Remove non-sense observation
+data <- data[-c(4,17),]
+head(data)
+
 # remove "timestamp" column
 data <- data %>%
   select(-Timestamp)
@@ -137,11 +141,9 @@ relevant_variables <- c(
 # Create a new data frame with the selected variables
 new_data <- data_gender_activities_major[relevant_variables]
 
-new_data_test <- new_data %>%
-  select(-Academic_Satisfaction_Low)
 
 new_data_test <- new_data %>%
-  select(-Student_Life_Satisfaction_Low)
+  select(-c(Academic_Satisfaction_Low, Student_Life_Satisfaction_Low))
 
 
 # Draw the Dendrogram (using "Complete Linkage", "Euclidean" Distance)
@@ -153,7 +155,7 @@ plot(hc_new_data) #plot dendogram
 rect.hclust(hc_new_data, k = 6, border = 2:5)
 
 # Remove datapoint 33th (due to Outlier), and re-draw the Dendrogram
-new_data_after <- new_data_test[-33,]
+new_data_after <- new_data_test[-31,]
 hc_new_data_after <- new_data_after %>%
   dist %>%
   hclust
@@ -163,9 +165,15 @@ rect.hclust(hc_new_data_after, k = 5, border = 2:5)
 
 # extract observations from Cluster 1 to a dataframe for analysis
 # cluster 1
-cluster_1 <- new_data_after[c(8,23,12,31,15),]
+cluster_1 <- new_data_after[c(27,20,33,31,41,9,25,43,8,1),]
 summary(cluster_1)
 plot(cluster_1)
+avg_gpa_cluster_1 <- mean(cluster_1$GPA)
+print(avg_gpa_cluster_1)
+
+# find average of frequency of participating in extracurricular activities of students in Cluster 1
+avg_frequency_cluster_1 <- mean(cluster_1$Frequency)
+print(avg_frequency_cluster_1)
 
 # Draw the Histogram for Frequency, and GPA Distribution of students in Cluster 1
 hist(cluster_1$GPA, 
@@ -186,7 +194,7 @@ hist(cluster_1$Frequency,
 # extract observations of Cluster 1, from the original dataframe
 # to draw the Pie chart showing percentage of students basing on Academic Satisfaction Level
 
-selected_records <- c(23, 8, 12, 15,31)
+selected_records <- c(27,20,34,32,42,9,25,44,8,1)
 
 subset_df <- data_gender_activities_major[selected_records, ]
 
@@ -219,7 +227,7 @@ ggplot(subset_df, aes(x = "", fill = Academic_Satisfaction_Category)) +
 
 # extract observations of Cluster 1 from the original dataframe
 # to draw the Pie chart to see the percentage of students basing on Student Life Satisfaction Level
-selected_records_sl <- c(23, 8, 12, 15,31)
+selected_records_sl <- c(27,20,34,32,42,9,25,44,8,1)
 
 subset_df_sl <- data_gender_activities_major[selected_records_sl, ]
 subset_df_sl
@@ -253,9 +261,16 @@ ggplot(subset_df_sl, aes(x = "", fill = Student_Life_Satisfaction_Category)) +
 
 # extract observations of Cluster 2 for analysis
 # cluster 2
-cluster_2 <- new_data_after[c(39,40,24,28,11,16,30,37),]
+cluster_2 <- new_data_after[c(40,23,38,16,4,42,18,3,17,6,2,24),]
 summary(cluster_2)
 plot(cluster_2)
+avg_gpa_cluster_2 <- mean(cluster_2$GPA)
+print(avg_gpa_cluster_2)
+
+# find average of frequency of participating in extracurricular activities of students in Cluster 2
+
+avg_frequency_cluster_2 <- mean(cluster_2$Frequency)
+print(avg_frequency_cluster_2)
 
 # Draw the Histogram to see the Distribution of GPA, and Frequency of students in Cluster 2
 hist(cluster_2$GPA, 
@@ -275,7 +290,7 @@ hist(cluster_2$Frequency,
 
 # extract observations of Cluster 2 from the original dataframe
 # to draw the Pie chart to see percentage of students basing on Academic Satisfaction Levels
-selected_records_2 <- c(39,40,24,28,11,16,30,37)
+selected_records_2 <- c(41,23,39,16,4,43,18,3,17,6,2,24)
 
 
 subset_df_2 <- data_gender_activities_major[selected_records_2, ]
@@ -309,7 +324,7 @@ ggplot(subset_df_2, aes(x = "", fill = Academic_Satisfaction_Category)) +
 
 # extract observations of Cluster 2 from the original dataframe
 # to draw the Pie chart to see percentage of Students basing on Student Life Satisfaction Levels
-selected_records_sl_2 <- c(39,40,24,28,11,16,30,37)
+selected_records_sl_2 <- c(41,23,39,16,4,43,18,3,17,6,2,24)
 
 subset_df_sl_2 <- data_gender_activities_major[selected_records_sl_2, ]
 subset_df_sl_2
@@ -343,9 +358,16 @@ ggplot(subset_df_sl_2, aes(x = "", fill = Student_Life_Satisfaction_Category)) +
 
 # extract Cluster 3 
 # cluster 3
-cluster_3 <- new_data_after[c(27,29,34,36,10,44,22,17,46,9,1,4),]
+cluster_3 <- new_data_after[c(19,13,39,32,35,30,12,5),]
 summary(cluster_3)
 plot(cluster_3)
+avg_gpa_cluster_3 <- mean(cluster_3$GPA)
+print(avg_gpa_cluster_3)
+
+# find average of frequency of participating in extracurricular activities of students in Cluster 3
+
+avg_frequency_cluster_3 <- mean(cluster_3$Frequency)
+print(avg_frequency_cluster_3)
 
 # Draw Histogram to see the Distribution of GPA, and Frequency of students in Cluster 3
 hist(cluster_3$GPA, 
@@ -364,7 +386,7 @@ hist(cluster_3$Frequency,
 
 # extract observations of Cluster 3 from the original dataframe
 # to draw the Pie chart to see percentage of students basing on Academic Satisfaction Levels
-selected_records_3 <- c(27,29,34,36,10,44,22,17,46,9,1,4)
+selected_records_3 <- c(19,13,40,33,36,30,12,5)
 
 
 subset_df_3 <- data_gender_activities_major[selected_records_3, ]
@@ -399,7 +421,7 @@ ggplot(subset_df_3, aes(x = "", fill = Academic_Satisfaction_Category)) +
 
 # extract observations of Cluster 3 from original dataframe
 # to draw Pie chart to see percentage of Students basing on Student Life Satisfaction Levels
-selected_records_sl_3 <- c(27,29,34,36,10,44,22,17,46,9,1,4)
+selected_records_sl_3 <- c(19,13,40,33,36,30,12,5)
 
 subset_df_sl_3 <- data_gender_activities_major[selected_records_sl_3, ]
 subset_df_sl_3
@@ -433,9 +455,16 @@ ggplot(subset_df_sl_3, aes(x = "", fill = Student_Life_Satisfaction_Category)) +
 
 # extract Cluster 4
 # cluster 4
-cluster_4 <- new_data_after[c(25,43,18,41,5,45,3,20,19,2,7,26),]
+cluster_4 <- new_data_after[c(21,7,29,11,14),]
 summary(cluster_4)
 plot(cluster_4)
+avg_gpa_cluster_4 <- mean(cluster_4$GPA)
+print(avg_gpa_cluster_4)
+
+# find average of frequency of participating in extracurricular activities of students in Cluster 4
+
+avg_frequency_cluster_4 <- mean(cluster_4$Frequency)
+print(avg_frequency_cluster_4)
 
 # Draw Histogram to see the Distribution of GPA, and Frequency of students in Cluster 4
 hist(cluster_4$GPA, 
@@ -454,7 +483,7 @@ hist(cluster_4$Frequency,
 
 # extract observations of Cluster 4 from original dataframe
 # to draw Pie chart to see percentage of students basing on Academic Satisfaction Levels
-selected_records_4 <- c(25,43,41,18,5,45,20,3,19,2,7,26)
+selected_records_4 <- c(21,7,29,11,14)
 
 # Logical indexing to select rows
 subset_df_4 <- data_gender_activities_major[selected_records_4, ]
@@ -488,7 +517,7 @@ ggplot(subset_df_4, aes(x = "", fill = Academic_Satisfaction_Category)) +
 
 # extract observations of Cluster 4 from original dataframe
 # to draw Pie chart to see percentage of students basing on Student Life Satisfaction Levels
-selected_records_sl_4 <- c(25,43,18,41,5,45,3,20,19,2,7,26)
+selected_records_sl_4 <- c(21,7,29,11,14)
 
 # Logical indexing to select rows
 subset_df_sl_4 <- data_gender_activities_major[selected_records_sl_4, ]
@@ -524,9 +553,15 @@ ggplot(subset_df_sl_4, aes(x = "", fill = Student_Life_Satisfaction_Category)) +
 
 # extract Cluster 5
 # cluster 5
-cluster_5 <- new_data_after[c(14,21,35,42,38,13,32,6),]
+cluster_5 <- new_data_after[c(36,37,26,22,15,10,28,34),]
 summary(cluster_5)
 plot(cluster_5)
+avg_gpa_cluster_5 <- mean(cluster_5$GPA)
+print(avg_gpa_cluster_5)
+
+# find average of frequency of participating in extracurricular activities of students in Cluster 5
+avg_frequency_cluster_5 <- mean(cluster_5$Frequency)
+print(avg_frequency_cluster_5)
 
 
 # Draw Histogram to see the Distribution of GPA, and Frequency of students in Cluster 5
@@ -546,7 +581,7 @@ hist(cluster_5$Frequency,
 
 # extract observations of Cluster 5 from original dataframe
 # to draw Pie chart to see percentage of students basing on Academic Satisfaction Levels
-selected_records_5 <- c(14,21,42,35,38,32,13,6)
+selected_records_5 <- c(37,38,26,22,15,10,28,35)
 
 
 subset_df_5 <- data_gender_activities_major[selected_records_5, ]
@@ -581,7 +616,7 @@ ggplot(subset_df_5, aes(x = "", fill = Academic_Satisfaction_Category)) +
 
 # extract observations of Cluster 5 from original dataframe
 # to draw Pie chart to see percentage of Students basing on Student Life Satisfaction
-selected_records_sl_5 <- c(14,21,35,42,38,13,32,6)
+selected_records_sl_5 <- c(37,38,26,22,15,10,28,35)
 
 subset_df_sl_5 <- data_gender_activities_major[selected_records_sl_5, ]
 subset_df_sl_5
@@ -660,3 +695,11 @@ ggplot(subset_df_sl_5, aes(x = "", fill = Student_Life_Satisfaction_Category)) +
   theme(
     plot.title = element_text(hjust = 0.5)  # Center the title
   )
+
+# find average of GPA of students in Whole Dataset
+avg_gpa_cluster_whole <- mean(data_new_gender_activities$GPA)
+print(avg_gpa_cluster_whole)
+
+# find average of frequency of participating in extracurricular activities of students in Whole Dataset
+avg_frequency_cluster_whole <- mean(data_new_gender_activities$Frequency)
+print(avg_frequency_cluster_whole)
