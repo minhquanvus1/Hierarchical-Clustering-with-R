@@ -1,5 +1,7 @@
 # read data from .csv, and load to a dataframe
 library(readr)
+library(dplyr)
+
 data <- read_csv("Survey_Response.csv")
 head(data)
 
@@ -28,6 +30,10 @@ colnames(data) <- column_mapping
 column_names <- colnames(data)
 
 # Create Dummy Variables for "Gender" column
+Male <- ifelse(data$Gender == 'Male (Nam)', 1, 0)
+Female <- ifelse(data$Gender == 'Female (Nữ)', 1, 0)
+Prefer_Not_To_Say <- ifelse(data$Gender == 'Prefer not to say', 1, 0)
+
 data_new_gender <- cbind(
   data,
   Male = Male,
@@ -56,6 +62,18 @@ data_new_gender_activities <- cbind(
 
 # View the new data frame
 data_new_gender_activities
+
+# extract the unique activities for each student
+unique_activities <- unique(data$Activities)
+unique_activities
+activity_binary <- data.frame(matrix(0, nrow = nrow(data), ncol = length(unique_activities)))
+colnames(activity_binary) <- unique_activities
+for (i in 1:nrow(data)) {
+  selected_activities <- unlist(strsplit(data$Activities[i], ", "))  # Assuming activities are separated by a comma and space
+  activity_binary[i, selected_activities] <- 1
+}
+data_activities_test <- cbind(data_new_gender, activity_binary)
+
 
 # create Dummy Variables for "Major" column
 CSE <- ifelse(data$Major == 'CSE', 1, 0)
@@ -88,12 +106,6 @@ data_gender_activities_major$Student_Life_Satisfaction_Medium <- ifelse(data_gen
 data_gender_activities_major$Student_Life_Satisfaction_High <- ifelse(data_gender_activities_major$Student_Life_Satisfaction >= 8 & data_gender_activities_major$Student_Life_Satisfaction <= 10, 1, 0)
 
 
-new_data_test <- new_data %>%
-  select(-Academic_Satisfaction_Low)
-
-new_data_test <- new_data %>%
-  select(-Student_Life_Satisfaction_Low)
-
 # Change intake values to numeric
 intake_mapping <- c(
   "First year of University (Năm nhất)" = 1,
@@ -120,15 +132,17 @@ relevant_variables <- c(
   "Student_Life_Satisfaction_High"
 )
 
-library(dplyr)
+#library(dplyr)
 
 # Create a new data frame with the selected variables
 new_data <- data_gender_activities_major[relevant_variables]
 
-new_data_test <- new_data_test %>%
-  select(-Academic_Satisfaction_Low) 
-new_data_test <- new_data_test %>%
-  select(-Student_Life_Satisfaction_Low) 
+new_data_test <- new_data %>%
+  select(-Academic_Satisfaction_Low)
+
+new_data_test <- new_data %>%
+  select(-Student_Life_Satisfaction_Low)
+
 
 # Draw the Dendrogram (using "Complete Linkage", "Euclidean" Distance)
 hc_new_data <- new_data_test %>% #get cars data
@@ -136,7 +150,7 @@ hc_new_data <- new_data_test %>% #get cars data
   hclust #compute hierarchical cluster
 plot(hc_new_data) #plot dendogram
 # cut the Dendrogram to create 6 clusters
-rect.hclust(hc_new_data, k = 6, border = "darkred")
+rect.hclust(hc_new_data, k = 6, border = 2:5)
 
 # Remove datapoint 33th (due to Outlier), and re-draw the Dendrogram
 new_data_after <- new_data_test[-33,]
@@ -174,7 +188,6 @@ hist(cluster_1$Frequency,
 
 selected_records <- c(23, 8, 12, 15,31)
 
-# Logical indexing to select rows
 subset_df <- data_gender_activities_major[selected_records, ]
 
 categorize_academic_satisfaction <- function(level) {
